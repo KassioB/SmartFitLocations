@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Details } from "./components/Details";
 import { Filter } from "./components/Filter";
 import { Informations } from "./components/Informations";
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
 
 type Schedule = {
   weekdays: string;
@@ -82,8 +84,9 @@ function App() {
 
   return (
     <div className="text-gray-800 px-4 py-8">
+      <Header/> 
       <div className="max-w-2xl mx-auto">
-        <h1 className="text-3xl mb-4">
+        <h1 className="text-3xl mt-30 mb-4">
           REABERTURA <br /> SMART FIT
         </h1>
         <hr className="my-6 w-25 border-t-10 border-gray-1000" />
@@ -105,6 +108,7 @@ function App() {
 
         <Details locations={filteredLocations} show={searchTriggered} />
       </div>
+      <Footer/> 
     </div>
   );
 }
